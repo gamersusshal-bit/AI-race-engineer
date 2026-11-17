@@ -1,0 +1,19 @@
+[project]
+name = "ai-race-engineer"
+version = "0.1.0"
+description = "Telemetry, lap-time/tyre/fuel models, race simulation and strategy optimisation"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy", "pandas", "pyarrow", "scikit-learn", "xgboost", "joblib",
+    "plotly", "streamlit", "gymnasium", "fastf1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+rl = ["stable-baselines3"]
+
+[tool.setuptools.packages.find]
+include = ["race_engineer*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
