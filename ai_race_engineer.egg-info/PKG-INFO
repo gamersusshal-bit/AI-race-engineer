@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: ai-race-engineer
+Version: 0.1.0
+Summary: Telemetry, lap-time/tyre/fuel models, race simulation and strategy optimisation
+Requires-Python: >=3.10
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyarrow
+Requires-Dist: scikit-learn
+Requires-Dist: xgboost
+Requires-Dist: joblib
+Requires-Dist: plotly
+Requires-Dist: streamlit
+Requires-Dist: gymnasium
+Requires-Dist: fastf1
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Provides-Extra: rl
+Requires-Dist: stable-baselines3; extra == "rl"

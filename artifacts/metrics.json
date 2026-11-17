@@ -1,0 +1,185 @@
+{
+  "data": {
+    "source": "synthetic",
+    "fingerprint": "7e38941c0943",
+    "validation": {
+      "rows_in": 13000,
+      "rows_out": 12966,
+      "dropped": {
+        "missing lap time": 34
+      }
+    }
+  },
+  "laptime": {
+    "selected": "xgboost",
+    "selection_rule": "lowest grouped-CV MAE on training sessions",
+    "models": {
+      "baseline_circuit_median": {
+        "test": {
+          "mae": 1.022521991990904,
+          "rmse": 1.2483524958552885,
+          "r2": -0.0166045816058098,
+          "n": 2375
+        }
+      },
+      "baseline_circuit_compound_median": {
+        "test": {
+          "mae": 1.0396313936315882,
+          "rmse": 1.2873306827510147,
+          "r2": -0.08108000728406828,
+          "n": 2375
+        }
+      },
+      "linear_regression": {
+        "cv_mae": 0.3706273667503155,
+        "test": {
+          "mae": 0.37113336047943757,
+          "rmse": 0.5759497123253736,
+          "r2": 0.7836052469199625,
+          "n": 2375
+        }
+      },
+      "random_forest": {
+        "cv_mae": 0.3455969335460063,
+        "test": {
+          "mae": 0.34001078107707644,
+          "rmse": 0.488903583933929,
+          "r2": 0.8440720257937704,
+          "n": 2375
+        }
+      },
+      "hist_gradient_boosting": {
+        "cv_mae": 0.3109046189851,
+        "test": {
+          "mae": 0.302374506173784,
+          "rmse": 0.45142637910728567,
+          "r2": 0.8670612894993032,
+          "n": 2375
+        }
+      },
+      "xgboost": {
+        "cv_mae": 0.3086615269403396,
+        "test": {
+          "mae": 0.29073778798278677,
+          "rmse": 0.43562816458937803,
+          "r2": 0.8762031781301829,
+          "n": 2375
+        }
+      }
+    },
+    "error_breakdown": {
+      "circuit": [
+        {
+          "circuit": "Barcelona",
+          "mae": 0.2728,
+          "bias": 0.0471,
+          "n": 484
+        },
+        {
+          "circuit": "Monza",
+          "mae": 0.2888,
+          "bias": 0.0582,
+          "n": 389
+        },
+        {
+          "circuit": "Sakhir",
+          "mae": 0.3319,
+          "bias": 0.0747,
+          "n": 413
+        },
+        {
+          "circuit": "Silverstone",
+          "mae": 0.2981,
+          "bias": 0.0044,
+          "n": 379
+        },
+        {
+          "circuit": "Spa",
+          "mae": 0.2963,
+          "bias": 0.0677,
+          "n": 318
+        },
+        {
+          "circuit": "Suzuka",
+          "mae": 0.2599,
+          "bias": 0.0476,
+          "n": 392
+        }
+      ],
+      "compound": [
+        {
+          "compound": "HARD",
+          "mae": 0.2638,
+          "bias": 0.0331,
+          "n": 637
+        },
+        {
+          "compound": "MEDIUM",
+          "mae": 0.2875,
+          "bias": 0.0768,
+          "n": 985
+        },
+        {
+          "compound": "SOFT",
+          "mae": 0.3177,
+          "bias": 0.0285,
+          "n": 753
+        }
+      ],
+      "drive_mode": [
+        {
+          "drive_mode": "conserve",
+          "mae": 0.2925,
+          "bias": 0.069,
+          "n": 547
+        },
+        {
+          "drive_mode": "normal",
+          "mae": 0.2597,
+          "bias": 0.0456,
+          "n": 1329
+        },
+        {
+          "drive_mode": "push",
+          "mae": 0.3716,
+          "bias": 0.0396,
+          "n": 499
+        }
+      ]
+    }
+  },
+  "fuel": {
+    "baseline_circuit_mean": {
+      "test": {
+        "mae": 0.05663430287011798,
+        "rmse": 0.07225602535823868,
+        "r2": 0.9138125730096442,
+        "n": 2375
+      }
+    },
+    "baseline_circuit_mode_mean": {
+      "test": {
+        "mae": 0.01982560988471782,
+        "rmse": 0.024820217520870796,
+        "r2": 0.989830328009932,
+        "n": 2375
+      }
+    },
+    "telemetry_linear": {
+      "test": {
+        "mae": 0.02969251326798423,
+        "rmse": 0.038682606531778664,
+        "r2": 0.9752982774452416,
+        "n": 2375
+      }
+    }
+  },
+  "pit_loss_s": {
+    "Barcelona": 21.46781784494881,
+    "Monza": 24.064264716580738,
+    "Sakhir": 22.52133679499223,
+    "Silverstone": 20.74515616123425,
+    "Spa": 19.1068227409299,
+    "Suzuka": 22.047252994193244
+  }
+}

@@ -1,0 +1,16 @@
+numpy
+pandas
+pyarrow
+scikit-learn
+xgboost
+joblib
+plotly
+streamlit
+gymnasium
+fastf1
+
+[dev]
+pytest
+
+[rl]
+stable-baselines3

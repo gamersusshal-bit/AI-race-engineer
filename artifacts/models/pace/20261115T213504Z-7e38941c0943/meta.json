@@ -1,0 +1,67 @@
+{
+  "name": "pace",
+  "version": "20261115T213504Z-7e38941c0943",
+  "code_version": "0.1.0",
+  "data_fingerprint": "7e38941c0943",
+  "data_source": "synthetic",
+  "seed": 7,
+  "train_sessions": [
+    "2021-Barcelona",
+    "2021-Monza",
+    "2021-Sakhir",
+    "2021-Silverstone",
+    "2021-Spa",
+    "2021-Suzuka",
+    "2022-Barcelona",
+    "2022-Monza",
+    "2022-Sakhir",
+    "2022-Silverstone",
+    "2022-Spa",
+    "2022-Suzuka",
+    "2023-Barcelona",
+    "2023-Monza",
+    "2023-Sakhir",
+    "2023-Silverstone",
+    "2023-Spa",
+    "2023-Suzuka",
+    "2024-Barcelona",
+    "2024-Monza",
+    "2024-Sakhir",
+    "2024-Silverstone",
+    "2024-Spa",
+    "2024-Suzuka"
+  ],
+  "test_sessions": [
+    "2025-Barcelona",
+    "2025-Monza",
+    "2025-Sakhir",
+    "2025-Silverstone",
+    "2025-Spa",
+    "2025-Suzuka"
+  ],
+  "estimator": "xgboost",
+  "features": [
+    "circuit",
+    "driver",
+    "compound",
+    "drive_mode",
+    "tyre_age",
+    "fuel_kg",
+    "lap_number",
+    "lap_frac",
+    "track_temp",
+    "tyre_age_sq",
+    "age_soft",
+    "age_medium",
+    "age_hard"
+  ],
+  "metrics": {
+    "cv_mae": 0.3086615269403396,
+    "test": {
+      "mae": 0.29073778798278677,
+      "rmse": 0.43562816458937803,
+      "r2": 0.8762031781301829,
+      "n": 2375
+    }
+  }
+}
